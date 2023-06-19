@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 840px;
+  background: linear-gradient(
+      180deg,
+      #242b33 11.98%,
+      rgba(45, 52, 60, 0.38) 51.04%,
+      #242b33 92.19%
+    ),
+    url('./../images/header/header_bg.jpg');
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 1rem;
+  }
+}

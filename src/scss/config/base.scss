@@ -1,0 +1,19 @@
+body {
+  background: $color-bg;
+  font-size: $font-size-default;
+  color: $color-text;
+}
+
+a {
+  color: $color-text;
+  transition: color 0.3s ease-in;
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+[class*='__container'] {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1140px;
+}

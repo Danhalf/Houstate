@@ -1,0 +1,10 @@
+@use 'sass:math';
+
+@import 'config/reset';
+@import 'config/vars';
+@import 'config/fonts';
+@import 'config/base';
+
+// components
+@import 'components/header';
+@import 'components/footer';
