@@ -18,12 +18,22 @@
     align-items: center;
   }
 
+  &__link {
+    cursor: pointer;
+    animation: slow-down 3s ease-in-out infinite;
+  }
   &__middle {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 80px;
+    cursor: default;
+    &:hover {
+      & .header__link {
+        animation-play-state: paused;
+      }
+    }
   }
 
   &__title {
@@ -40,23 +50,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 200px;
     &--placeholder {
       padding: 0 60px;
     }
     .contact {
-      flex: 1;
       display: flex;
       align-items: center;
       font-size: 18px;
       vertical-align: middle;
+      flex: 1;
+      &:hover .contact__icon {
+        transform: rotate(20deg);
+      }
       &__icon {
         width: 21px;
         height: 21px;
         margin: 0 10px;
+        transition: 0.3s;
       }
       &:first-child {
         margin-left: auto;
+        justify-content: flex-end;
       }
     }
+  }
+}
+
+@keyframes slow-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
