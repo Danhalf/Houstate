@@ -2,17 +2,36 @@
   <div class="header__container">
     <div class="header__top">
       <a href="#" class="header__logo"> @@include('logo.html') </a>
-      <div class="header__nav">
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Place</a></li>
-            <li><a href="#">Catalog</a></li>
-            <li><a href="#">Credit</a></li>
-            <li><a href="#">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
+      <div class="header__nav">@@include('nav.html')</div>
+    </div>
+    <div class="header__middle">
+      <h1 class="header__title">
+        Residential complex <br />
+        in the historical center
+      </h1>
+      <a href="#benefits" class="header__link">
+        <img src="./images/header/mouse.svg" alt="link to benefits image" />
+      </a>
+    </div>
+    <div class="header__bottom">
+      <a class="contact" href="#">
+        <img
+          class="contact__icon"
+          src="./images/header/pin.svg"
+          alt="icon for address"
+        />
+        123 Main Street, City
+      </a>
+
+      <div class="header__bottom--placeholder"></div>
+      <a class="contact" href="tel:5551234567">
+        <img
+          class="contact__icon"
+          src="./images/header/phone-call.svg"
+          alt="icon for phone"
+        />
+        555-123-4567</a
+      >
     </div>
 
     <!-- <nav class="header__menu menu">

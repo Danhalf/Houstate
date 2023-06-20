@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 840px;
+  padding-top: 30px;
+  padding-bottom: 74px;
   background: linear-gradient(
       180deg,
       #242b33 11.98%,
@@ -13,12 +15,48 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-}
 
-.nav {
-  &__list {
+  &__middle {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__title {
+    font-family: $font-accent;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    padding-top: 200px;
+    color: $color-accent;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--placeholder {
+      padding: 0 60px;
+    }
+    .contact {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      vertical-align: middle;
+      &__icon {
+        width: 21px;
+        height: 21px;
+        margin: 0 10px;
+      }
+      &:first-child {
+        margin-left: auto;
+      }
+    }
   }
 }
