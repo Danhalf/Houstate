@@ -7,11 +7,12 @@
   padding-bottom: 74px;
   background: linear-gradient(
       180deg,
-      #242b33 11.98%,
+      $color-bg 11.98%,
       rgba(45, 52, 60, 0.38) 51.04%,
-      #242b33 92.19%
+      $color-bg 92.19%
     ),
-    url('./../images/header/header_bg.jpg');
+    url('./../images/header/header_bg3.jpg') transparent no-repeat top center /
+      cover;
   &__top {
     display: flex;
     justify-content: space-between;

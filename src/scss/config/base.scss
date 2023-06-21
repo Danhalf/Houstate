@@ -36,3 +36,10 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.subtitle {
+  font-size: 36px;
+  font-family: $font-accent;
+  color: $color-accent;
+  font-weight: 700;
+}
