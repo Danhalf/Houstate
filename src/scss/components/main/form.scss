@@ -1,0 +1,39 @@
+.form {
+  &__input {
+    height: 50px;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba($color-text, 0.2);
+    color: $color-text;
+    transition: background-color 0.3s ease-in;
+    &::placeholder {
+      color: $color-placeholder;
+    }
+    &:focus {
+      background-color: rgba($color-text, 0.25);
+      &::placeholder {
+        color: $color-text;
+      }
+    }
+  }
+  &__button {
+    height: 50px;
+    font-size: 16px;
+    padding: 12px;
+    color: $color-text;
+    font-weight: 700;
+    text-align: center;
+    background-color: $color-accent;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+      background-color: saturate($color-accent, 10%);
+    }
+  }
+  &__privacy {
+    color: $color-note;
+    text-align: center;
+    line-height: 1.23;
+    letter-spacing: -0.2px;
+  }
+}
