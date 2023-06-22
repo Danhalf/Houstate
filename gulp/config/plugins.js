@@ -1,9 +1,9 @@
-import replace from 'gulp-replace'; // Поиск и замена
-import plumber from 'gulp-plumber'; // Обработка ошибок
-import notify from 'gulp-notify'; // Сообщения (подсказки)
-import browserSync from 'browser-sync'; // Локальный сервер
-import newer from 'gulp-newer'; // Проверка обновления
-import ifPlugin from 'gulp-if'; // Условное ветление
+import replace from 'gulp-replace';
+import plumber from 'gulp-plumber';
+import notify from 'gulp-notify';
+import browserSync from 'browser-sync';
+import newer from 'gulp-newer';
+import ifPlugin from 'gulp-if';
 
 const concatPathAndFileName = (path, files) => {
   return files.map((file) => `${path}/${file}`);

@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import webp from 'gulp-webp';
+import avif from "gulp-avif";
 import imageMin from 'gulp-imagemin';
 
 import { plugins } from '../config/plugins.js';
@@ -8,9 +9,11 @@ import { isBuild } from '../../gulpfile.js';
 
 const images = () => {
   return gulp
-    .src(filePaths.src.images)
+    .src(filePaths.src.images, !filePaths.src.svg)
     .pipe(plugins.handleError('IMAGES'))
     .pipe(plugins.newer(filePaths.build.images))
+    .pipe(plugins.if(isBuild, avif({ quality: 60 })))
+    .pipe(gulp.src(filePaths.src.images))
     .pipe(plugins.if(isBuild, webp()))
     .pipe(plugins.if(isBuild, gulp.dest(filePaths.build.images)))
     .pipe(plugins.if(isBuild, gulp.src(filePaths.src.images)))

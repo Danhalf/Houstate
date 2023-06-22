@@ -8,7 +8,6 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(290px, 1fr));
   gap: 30px;
-  flex-wrap: wrap;
   &__item {
     display: inline-block;
     max-width: 540px;

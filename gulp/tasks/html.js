@@ -1,8 +1,8 @@
 import gulp from 'gulp';
 import fileInclude from 'gulp-file-include';
-import webpHtml from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
 import htmlMin from 'gulp-htmlmin';
+import gulpHtmlImgWrapper from 'gulp-html-img-wrapper';
 
 import { plugins } from '../config/plugins.js';
 import { filePaths } from '../config/paths.js';
@@ -13,7 +13,11 @@ const html = () => {
     .pipe(plugins.handleError('HTML'))
     .pipe(fileInclude())
     .pipe(plugins.replace(/@img\//g, 'images/'))
-    .pipe(plugins.if(app.isBuild, webpHtml()))
+    // .pipe(
+    //   gulpHtmlImgWrapper({
+    //     extensions: ['.jpg', '.png', '.jpeg'], // write your own extensions pack (case insensitive)
+    //   })
+    // )
     .pipe(
       htmlMin({
         useShortDoctype: true,

@@ -4,9 +4,10 @@ import svgSprite from 'gulp-svg-sprite';
 import { filePaths } from '../config/paths.js';
 import { plugins } from '../config/plugins.js';
 
+const { src, dest } = gulp;
+
 const createSvgSprite = () => {
-  return gulp
-    .src(`${filePaths.src.svgIcons}`, {})
+  return src(`${filePaths.src.svg}`)
     .pipe(plugins.handleError('SVG'))
     .pipe(
       svgSprite({
@@ -18,7 +19,7 @@ const createSvgSprite = () => {
         },
       })
     )
-    .pipe(gulp.dest(`${filePaths.build.images}`));
+    .pipe(dest(`${filePaths.build.images}`));
 };
 
 export { createSvgSprite };

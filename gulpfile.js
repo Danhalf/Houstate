@@ -41,9 +41,9 @@ const mainTasks = gulp.series(fonts, devTasks);
 
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const build = gulp.series(reset, mainTasks);
+const build = gulp.series(mainTasks);
 
 gulp.task('default', dev);
 
 
-export { dev, build, createSvgSprite, isBuild, isDev };
+export { dev, build, createSvgSprite, isBuild, isDev, reset, images };
