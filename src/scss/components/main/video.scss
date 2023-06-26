@@ -1,0 +1,40 @@
+.video {
+  // .video__title
+  display: flex;
+  justify-content: center;
+
+  &__title {
+  }
+
+  // .video__link
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, $color-bg 10%, rgba(36, 43, 51, 0.4));
+    }
+  }
+
+  // .video__icon
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  // .video__img
+
+  &__img {
+  }
+}
+.visually-hidden {
+}
