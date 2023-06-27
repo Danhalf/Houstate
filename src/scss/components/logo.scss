@@ -1,4 +1,8 @@
 .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &__top {
     font-size: 36px;
     text-align: center;
