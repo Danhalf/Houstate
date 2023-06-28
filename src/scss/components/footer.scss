@@ -1,6 +1,13 @@
 .footer {
+  background-color: $color-footer-bg;
+  padding-top: 72px;
+  padding-bottom: 51px;
   &__row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  &__logo {
+    margin-top: -12px;
   }
 }
