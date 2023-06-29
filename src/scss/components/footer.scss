@@ -10,4 +10,15 @@
   &__logo {
     margin-top: -12px;
   }
+
+  .nav__list,
+  .address__list {
+    flex-direction: column;
+    gap: 15px;
+    color: $color-text;
+  }
+}
+
+.address__list {
+  display: flex;
 }

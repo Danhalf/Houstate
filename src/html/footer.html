@@ -1,20 +1,19 @@
 <footer class="footer">
   <ul class="footer__row">
     <a href="#" class="footer__logo"> @@include('logo.html') </a>
-    <ul class="footer__nav">
-      <li> About the complex </li>
-      <li> District </li>
-      <li> Apartments catalog </li>
-      <li> Mortgage </li>
-      <li> Contacts </li>
+    @@include('footer-nav.html')
+    <div class="footer__address address">
+      <ul class="address__list">
+        <li class="address__item">
+          <a href="#map" class="address__link">Address: 123 Main Street, City</a>
+        </li>
+        <li class="address__item">
+          <a href="tel:555123456" class="address__link">Phone: 555-123-4567</a>
+        </li>
+        <li class="address__item">Sales department: 10:00 - 19:00</li>
+        <li class="address__item">
+          <a href="mailto:manage@houstate.com" class="address__link">E-mail: manage@houstate.com</a>
+        </li>
     </ul>
-    <ul class="footer__nav">
-     <li> Settlement and moving </li>
-      <li> Service services </li>
-      <li> Ecological stability </li>
-      <li> Investment capabilities </li>
-      <li> Loyalty program </li>
-    </ul>
-    <div class="footer__address">addr</div>
   </div>
 </footer>
