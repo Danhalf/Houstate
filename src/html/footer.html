@@ -1,19 +1,25 @@
 <footer class="footer">
-  <ul class="footer__row">
+  <div class="footer__row">
     <a href="#" class="footer__logo"> @@include('logo.html') </a>
     @@include('footer-nav.html')
     <div class="footer__address address">
       <ul class="address__list">
         <li class="address__item">
-          <a href="#map" class="address__link">Address: 123 Main Street, City</a>
+          <a href="#map" class="address__link"
+            >Address: 123 Main Street, City</a
+          >
         </li>
         <li class="address__item">
           <a href="tel:555123456" class="address__link">Phone: 555-123-4567</a>
         </li>
         <li class="address__item">Sales department: 10:00 - 19:00</li>
         <li class="address__item">
-          <a href="mailto:manage@houstate.com" class="address__link">E-mail: manage@houstate.com</a>
+          <a href="mailto:manage@houstate.com" class="address__link"
+            >E-mail: manage@houstate.com</a
+          >
         </li>
-    </ul>
+      </ul>
+      @@include('socials.html')
+    </div>
   </div>
 </footer>
