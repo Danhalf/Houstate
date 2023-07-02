@@ -1,8 +1,18 @@
 .map {
-  // .map__title
+  position: relative;
   padding: 180px 0;
 
-  &__title {
+  &::after {
+    content: 'V';
+    position: absolute;
+    top: 17.5%;
+    z-index: -1;
+    left: 0;
+    transform: translateX(-50%);
+    line-height: 1.2;
+    opacity: 0.02;
+    font-size: 400px;
+    font-family: $font-accent;
   }
 
   // .map__map
