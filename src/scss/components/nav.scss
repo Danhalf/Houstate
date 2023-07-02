@@ -6,3 +6,46 @@
     gap: 2rem;
   }
 }
+
+.nav-btn {
+  position: relative;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to right, $color-text 0%, $color-text 100%);
+  background-size: 50px 2px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: 0.2s background;
+  border: none;
+  font-size: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    width: 50px;
+    height: 2px;
+    background: $color-text;
+    transition: 0.2s transform;
+    transform-origin: 8px 7px;
+  }
+  &:after {
+    top: 63px;
+    transform-origin: 8px -5px;
+  }
+
+  &.is-open {
+    background-size: 0px 2px;
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
