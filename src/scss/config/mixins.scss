@@ -16,3 +16,9 @@
   font-family: $font-accent;
   z-index: -1;
 }
+
+@mixin media_tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}

@@ -11,8 +11,10 @@
       rgba(45, 52, 60, 0.38) 51.04%,
       $color-bg 92.19%
     ),
-    url('./../images/header/header_bg3.jpg') transparent no-repeat top center /
-      cover;
+    url('./../images/header/header_bg3.jpg') no-repeat top center;
+
+  background-size: cover;
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -35,6 +37,10 @@
         animation-play-state: paused;
       }
     }
+
+    @include media_tablet {
+      gap: 40px;
+    }
   }
 
   &__title {
@@ -45,6 +51,11 @@
     text-align: center;
     padding-top: 200px;
     color: $color-accent;
+
+    @include media_tablet {
+      padding-top: 100px;
+      font-size: calc(38px + 0.4vw);
+    }
   }
 
   &__bottom {
@@ -73,7 +84,30 @@
       &:first-child {
         margin-left: auto;
         justify-content: flex-end;
+
+        @include media_tablet {
+          margin-left: 0;
+        }
       }
+    }
+    @include media_tablet {
+      margin-top: 80px;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__nav {
+    @include media_tablet {
+      display: none;
+    }
+  }
+
+  &__nav-btn {
+    display: none;
+
+    @include media_tablet {
+      display: block;
     }
   }
 }
