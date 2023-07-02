@@ -1,0 +1,18 @@
+@mixin decor_number(
+  $content,
+  $top: 0,
+  $side: right,
+  $x: +50%,
+  $line-height: 1
+) {
+  content: $content;
+  position: absolute;
+  top: $top;
+  #{$side}: 0;
+  transform: translateX($x);
+  line-height: $line-height;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: $font-accent;
+  z-index: -1;
+}

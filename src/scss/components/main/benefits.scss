@@ -1,16 +1,9 @@
 .benefits {
   padding: 120px 0;
   position: relative;
+
   &::after {
-    content: 'II';
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(+50%);
-    line-height: 1.2;
-    opacity: 0.02;
-    font-size: 400px;
-    font-family: $font-accent;
+    @include decor_number('II', $line-height: 1.2);
   }
   &__container {
     max-width: 824px;

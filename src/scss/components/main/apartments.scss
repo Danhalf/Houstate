@@ -1,15 +1,7 @@
 .apartments {
   position: relative;
   &::before {
-    content: 'III';
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-50%);
-    line-height: 1;
-    opacity: 0.02;
-    font-size: 400px;
-    font-family: $font-accent;
+    @include decor_number('III', $side: left, $x: -50%);
   }
   &__title {
     margin-bottom: 88px;
