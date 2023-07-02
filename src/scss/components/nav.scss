@@ -7,10 +7,22 @@
   }
 }
 
+.nav-overlay {
+  &::before {
+    content: '';
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
 .nav-btn {
   position: relative;
   margin: auto;
   width: 100px;
+  z-index: 101;
   height: 100px;
   background: linear-gradient(to right, $color-text 0%, $color-text 100%);
   background-size: 50px 2px;
@@ -39,7 +51,7 @@
     transform-origin: 8px -5px;
   }
 
-  &.is-open {
+  &.button-open {
     background-size: 0px 2px;
     &:before {
       transform: rotate(45deg);
