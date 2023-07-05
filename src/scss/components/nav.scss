@@ -1,6 +1,7 @@
 .nav {
   font-size: 14px;
   letter-spacing: 0.05em;
+  position: relative;
   &__list {
     display: flex;
     gap: 2rem;
@@ -8,6 +9,7 @@
 }
 
 .nav-overlay {
+  overflow: hidden;
   &::before {
     content: '';
     z-index: 100;
@@ -18,8 +20,25 @@
   }
 }
 
-.nav-overlay .nav {
+// .header__nav {
+//   transform: translateY(-100%);
+//   transition: all 0.3s ease-in;
+// }
+
+.nav-overlay .header__nav {
   display: block;
+  position: fixed;
+  top: 0;
+  z-index: 101;
+  padding-top: 160px;
+  width: 100%;
+  .nav {
+    font-size: 32px;
+    &__list {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
 }
 
 .nav-btn {
