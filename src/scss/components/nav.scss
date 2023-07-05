@@ -9,14 +9,16 @@
 }
 
 .nav-overlay {
-  overflow: hidden;
-  &::before {
-    content: '';
-    z-index: 100;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+  @include media_tablet {
+    overflow: hidden;
+    &::before {
+      content: '';
+      z-index: 100;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+    }
   }
 }
 
@@ -25,24 +27,33 @@
 //   transition: all 0.3s ease-in;
 // }
 
-.nav-overlay .header__nav {
-  display: block;
-  position: fixed;
-  top: 0;
-  z-index: 101;
-  padding-top: 160px;
-  width: 100%;
-  .nav {
-    font-size: 32px;
-    &__list {
-      align-items: center;
-      flex-direction: column;
+.nav-overlay {
+  @include media_tablet {
+    .header {
+      &__nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 101;
+        padding-top: 160px;
+        width: 100%;
+      }
+      .nav {
+        font-size: 32px;
+        &__list {
+          align-items: center;
+          row-gap: 40px;
+          flex-direction: column;
+        }
+      }
     }
   }
 }
 
 .nav-btn {
-  position: relative;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   margin: auto;
   width: 100px;
   z-index: 101;
