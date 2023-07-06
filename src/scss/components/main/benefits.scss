@@ -13,6 +13,11 @@
 .benefits__list {
   display: flex;
   justify-content: space-between;
+  @include media_tablet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    row-gap: 50px;
+  }
 }
 .benefits__item {
   flex: 20% 0;
@@ -25,11 +30,22 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 1.35;
+  @include media_tablet {
+    row-gap: 20px;
+  }
   &--img {
     width: 80px;
     height: 80px;
+    @include media_tablet {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
   }
   &--text {
     text-align: center;
+    @include media_tablet {
+      font-size: 16px;
+    }
   }
 }
