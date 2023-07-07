@@ -2,6 +2,10 @@
   padding: 120px 0;
   position: relative;
 
+  @include media_tablet {
+    padding: 80px 0;
+  }
+
   &::after {
     @include decor_number('II', $line-height: 1.2);
   }

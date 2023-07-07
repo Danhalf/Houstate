@@ -1,10 +1,10 @@
 @use 'sass:math';
 
 @import 'config/reset';
-@import 'config/vars';
 @import 'config/fonts';
-@import 'config/base';
+@import 'config/vars';
 @import 'config/mixins';
+@import 'config/base';
 
 // components
 @import 'components/logo';
