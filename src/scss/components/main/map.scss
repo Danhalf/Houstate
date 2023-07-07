@@ -1,6 +1,9 @@
 .map {
   position: relative;
   padding: 180px 0;
+  @include media_tablet {
+    padding: 100px 0;
+  }
 
   &::after {
     @include decor_number('V', $side: left, $top: 22.5%, $x: -50%);
@@ -12,5 +15,8 @@
     margin-top: 88px;
     height: 358px;
     background: grey;
+    @include media_tablet {
+      margin-top: 44px;
+    }
   }
 }

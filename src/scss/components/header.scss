@@ -12,8 +12,12 @@
       $color-bg 92.19%
     ),
     url('./../images/header/header_bg3.jpg') no-repeat top center;
-
   background-size: cover;
+
+  @include media_tablet {
+    min-height: 500px;
+    padding-bottom: 40px;
+  }
 
   &__top {
     display: flex;

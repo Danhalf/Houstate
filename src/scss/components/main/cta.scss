@@ -8,7 +8,10 @@
     ),
     linear-gradient(0deg, $color-bg 10%, rgba(36, 43, 51, 0.9)),
     url('./../images/cta/ctabg.jpg'), lightgray 50% / cover no-repeat;
-  // .cta__title
+
+  @include media_tablet {
+    padding: 90px 0;
+  }
 
   &__title {
     margin-bottom: 17px;
@@ -20,12 +23,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @include media_tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   // .cta__text
 
   &__text {
     line-height: 1.5;
+    @include media_mobile {
+      font-size: 14px;
+    }
   }
 
   // .cta__form
@@ -34,5 +43,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 35px 30px;
+
+    @include media_mobile {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .form__privacy {
+        grid-row: 4 / 5;
+      }
+    }
   }
 }
