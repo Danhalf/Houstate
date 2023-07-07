@@ -1,4 +1,8 @@
 .form {
+  display: grid;
+  > * {
+    width: 100%;
+  }
   &__input {
     height: 50px;
     padding: 12px;
@@ -35,5 +39,9 @@
     text-align: center;
     line-height: 1.23;
     letter-spacing: -0.2px;
+  }
+  @include media_mobile {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

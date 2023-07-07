@@ -5,3 +5,7 @@
 @import 'form';
 @import 'map';
 @import 'feedback';
+
+main > div > * {
+  overflow: hidden;
+}

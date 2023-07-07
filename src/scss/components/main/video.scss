@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   &::after {
     @include decor_number('IV', $top: 20%, $line-height: 1.2);
   }
@@ -9,6 +10,7 @@
   &__link {
     position: relative;
     display: inline-block;
+    max-width: 100vw;
     &::before {
       content: '';
       position: absolute;
@@ -38,10 +40,15 @@
     top: 50%;
     transition: transform 0.3s ease-in;
     transform: translate(-50%, -50%);
+    @include media_mobile {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   // .video__img
 
   &__img {
+    max-width: 100vw;
   }
 }
