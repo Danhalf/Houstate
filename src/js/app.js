@@ -1,3 +1,4 @@
+import './phone-mask.min.js'
 window.addEventListener('DOMContentLoaded', () => {
    const buttonSelector = document.querySelector('.nav-btn');
    const menuSelector = document.querySelector('.nav-menu');
@@ -51,8 +52,5 @@ window.addEventListener('DOMContentLoaded', () => {
    buttonSelector.addEventListener('click', action);
 
 
-   const telInputs = document.querySelectorAll('input[type=text]');
-
-   telInputs.forEach(input => intlTelInput(input))
 })
 
