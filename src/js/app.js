@@ -1,4 +1,6 @@
 import './phone-mask.min.js'
+import './youtubeLightbox.js'
+
 window.addEventListener('DOMContentLoaded', () => {
    const buttonSelector = document.querySelector('.nav-btn');
    const menuSelector = document.querySelector('.nav-menu');
