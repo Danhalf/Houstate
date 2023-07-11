@@ -2,7 +2,8 @@
 .idea
 .temporary_cache
 
-dist
+# dist
+src
 node_modules
 package-lock.json
 gulp/version.json
