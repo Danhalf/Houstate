@@ -1,92 +1,55 @@
-// ! Селектор для ссылок - на которых нужно вызывать youtubeLightbox
-const linksBtnsSelector = 'a[data-youtubeLightbox]';
-// const linksBtnsSelector = '.lightbox';
+const getYoutubeVideoCode = url => url.includes('.com/') ? url.split('.com/')[1] : url.split('.be/')[1]
+// 	const init = url.indexOf('?') + 3
+// 	const final = url.indexOf('&', init)
+// 	const code = final === -1 ? url.slice(init) : url.slice(init, final)
+// 	const params = url.slice(final + 1)
+// 	console.log(`${code}?${params}&`)
+// 	return final === -1 ? `${code}?` : `${code}?${params}&`;
+// };
 
-// load Youtube API code asynchronously
-var tag = document.createElement('script');
+const videoHtmlGenerator = code => (
+	`<div class="v-modal__content">
+		<div class="v-modal--close"></div>
+		<div class="v-modal__video">
+			<iframe src="https://www.youtube.com/embed/${code}/autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>`
+)
 
-tag.src = 'https://www.youtube.com/iframe_api';
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var isiOS = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i) != null; //boolean check for iOS devices
 
-var youtubelightbox = document.getElementById('youtubelightbox');
-var player; // variable to hold new YT.Player() instance
 
-// Hide lightbox when clicked on
-youtubelightbox.addEventListener(
-	'click',
-	function () {
-		this.style.display = 'none';
-		player.stopVideo();
-	},
-	false
-);
+const printYoutubeModal = youtubeVideoCode => {
+	const modal = document.createElement('div');
+	modal.classList.add('v-modal');
+	modal.innerHTML = videoHtmlGenerator(youtubeVideoCode)
+	document.body.appendChild(modal);
+	closeModal(modal);
+};
 
-// Exclude youtube iframe from above action
-youtubelightbox
-	.querySelector('.youtubelightbox__centeredchild')
-	.addEventListener(
-		'click',
-		function (e) {
-			e.stopPropagation();
-		},
-		false
-	);
-
-// define onYouTubeIframeAPIReady() function and initialize lightbox when API is ready
-function onYouTubeIframeAPIReady() {
-	createlightbox();
-}
-
-// Extracts the Youtube video ID from a well formed Youtube URL
-function getyoutubeid(link) {
-	// Assumed Youtube URL formats
-	// https://www.youtube.com/watch?v=Pe0jFDPHkzo
-	// https://youtu.be/Pe0jFDPHkzo
-	// https://www.youtube.com/v/Pe0jFDPHkzo
-	// and more
-
-	//See http://stackoverflow.com/a/6904504/4360074
-	var youtubeidreg =
-		/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i;
-	return youtubeidreg.exec(link)[1]; // return Youtube video ID portion of link
-}
-
-// Creates a new YT.Player() instance
-function createyoutubeplayer(videourl) {
-	player = new YT.Player('youtubelightboxPlayer', {
-		videoId: videourl,
-		playerVars: { autoplay: 1 },
+const closeModal = modal => {
+	const cerrarModal = document.querySelector('.v-modal--close');
+	cerrarModal.addEventListener('click', () => {
+		document.body.removeChild(modal);
 	});
-}
 
-// Main Youtube lightbox function
-function createlightbox() {
-	var targetlinks = document.querySelectorAll(linksBtnsSelector);
+	window.addEventListener('keyup', e => {
+		if (e.key === 'Escape') {
+			cerrarModal.click();
+		}
+	});
+};
 
-	for (var i = 0; i < targetlinks.length; i++) {
-		var link = targetlinks[i];
-		link._videoid = getyoutubeid(link); // store youtube video ID portion of link inside _videoid property
-		targetlinks[i].addEventListener(
-			'click',
-			function (e) {
-				youtubelightbox.style.display = 'block';
-				if (typeof player == 'undefined') {
-					// if video player hasn't been created yet
-					createyoutubeplayer(this._videoid);
-				} else {
-					if (isiOS) {
-						// iOS devices can only use the "cue" related methods
-						player.cueVideoById(this._videoid);
-					} else {
-						player.loadVideoById(this._videoid);
-					}
-				}
-				e.preventDefault();
-			},
-			false
-		);
-	}
-}
+
+const openYoutubeModal = selector => {
+	let linksElements = [...document.querySelectorAll(selector)],
+		links = linksElements.map(link => link.href);
+	linksElements.forEach((el, i) => {
+		el.addEventListener('click', e => {
+			e.preventDefault();
+			printYoutubeModal(getYoutubeVideoCode(links[i]));
+		});
+	});
+};
+
+openYoutubeModal('.v-modal--trigger');
