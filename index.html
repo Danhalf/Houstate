@@ -1,1 +1,340 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.18.0/maps/maps.css?_v=20230711220546"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css?_v=20230711220546"><link rel="stylesheet" href="css/style.min.css?_v=20230711220546"><title>Houstate</title></head><body><header class="header"><div class="header__container"><div class="header__top"><a href="#" class="header__logo"><div class="logo"><div class="logo__top">HouState</div><span class="logo__bottom">The place of your life</span></div></a><div class="header__nav"><nav class="nav"><ul class="nav__list"><li class="nav__item"><a class="nav__link" href="#">About</a></li><li class="nav__item"><a class="nav__link" href="#">District</a></li><li class="nav__item"><a class="nav__link" href="#">Catalog</a></li><li class="nav__item"><a class="nav__link" href="#">Mortgage</a></li><li class="nav__item"><a class="nav__link" href="#">Contacts</a></li></ul></nav></div><div class="header__nav-btn"><button class="nav-btn"></button></div></div><div class="header__middle"><h1 class="header__title">Residential complex<br>in the historical center</h1><a href="#benefits" class="header__link"><img src="./images/header/mouse.svg" alt="link to benefits image"></a></div><div class="header__bottom"><a class="contact" href="#"><img id="svg" class="contact__icon" src="./images/header/pin.svg" alt="icon for address"> 123 Main Street, City</a><div class="header__bottom--placeholder"></div><a class="contact" href="tel:5551234567"><img class="contact__icon" src="./images/header/phone-call.svg" alt="icon for phone"> 555-123-4567</a></div></div></header><main class="main"><div class="main__container"><section class="benefits" id="benefits"><h2 class="visually-hidden">HouState benefits</h2><div class="benefits__container"><ul class="benefits__list"><li class="benefits__item"><img src="./images/benefits/bench.svg" alt="image for benefits item" class="benefits__item--img"><p class="benefits__item--text">Parks and squares neaby</p></li><li class="benefits__item"><img src="./images/benefits/building.svg" alt="image for benefits item" class="benefits__item--img"><p class="benefits__item--text">Fully of all equipped</p></li><li class="benefits__item"><img src="./images/benefits/fountain.svg" alt="image for benefits item" class="benefits__item--img"><p class="benefits__item--text">10 fountains in the territory</p></li><li class="benefits__item"><img src="./images/benefits/bicycle.svg" alt="image for benefits item" class="benefits__item--img"><p class="benefits__item--text">6 km bicycle paths</p></li></ul></div></section><section class="apartments" id="apartments"><h3 class="subtitle apartments__title">Our apartments</h3><article class="apartments__cards cards"><a href="#" class="cards__item"><img src="./images/apartments/appartment_1.jpg" alt="" class="cards__item--img"><h4 class="cards__item--title">Penthouse "Olympus"</h4></a><a href="#" class="cards__item"><img src="./images/apartments/appartment_2.jpg" alt="" class="cards__item--img"><h4 class="cards__item--title">apartments "Life studio"</h4></a><a href="#" class="cards__item"><img src="./images/apartments/appartment_3.jpg" alt="" class="cards__item--img"><h4 class="cards__item--title">Apartment "Nostalgia"</h4></a><a href="#" class="cards__item"><img src="./images/apartments/appartment_4.jpg" alt="" class="cards__item--img"><h4 class="cards__item--title">Housing "Creative"</h4></a></article></section><section class="cta"><h2 class="subtitle cta__title">Would you like to see?</h2><div class="cta__wrapper"><div class="cta__text">LCD HouState is a business class project located in the city center. The complex offers its residents apartments with an area of 60 to 160 square meters. The building will have three sections in which Only 42 apartments will be located.</div><form action="" class="form cta__form"><input type="text" class="form__input" placeholder="Your name"> <input type="tel" class="form__input masked-phone" placeholder="Your phone"><p class="form__privacy">*We do not transfer your data to anyone. And don't save your number in the base.</p><button class="form__button">I want to see</button></form></div></section><section class="video"><h2 class="visually-hidden video__title">Video about Houstate</h2><a href="https://youtu.be/hqchBvJtFsc" class="v-modal--trigger video__link"><img src="./images/video/play-button.svg" alt="icon-play" class="video__icon"> <img src="./images/video/preview.jpg" alt="video-preview" class="video__img"></a></section><section class="map"><h2 class="subtitle map__title">District on the map</h2><div id="map-container" class="map__map"></div></section><section class="feedback"><h2 class="subtitle feedback__title">Are there any question?</h2><form action="" class="form feedback__form"><input type="text" class="form__input" placeholder="Your name"> <input type="tel" class="form__input masked-phone" placeholder="Your phone"><p class="form__privacy">*We do not transfer your data to anyone. And don't save your number in the base.</p><button class="form__button">I want to see</button></form></section></div></main><footer class="footer"><div class="footer__row"><a href="#" class="footer__logo"><div class="logo"><div class="logo__top">HouState</div><span class="logo__bottom">The place of your life</span></div></a><div class="footer__nav"><nav class="nav"><ul class="nav__list"><li class="nav__item"><a class="nav__link" href="#">About</a></li><li class="nav__item"><a class="nav__link" href="#">District</a></li><li class="nav__item"><a class="nav__link" href="#">Catalog</a></li><li class="nav__item"><a class="nav__link" href="#">Mortgage</a></li><li class="nav__item"><a class="nav__link" href="#">Contacts</a></li></ul></nav></div><div class="footer__nav"><nav class="nav"><ul class="nav__list"><li class="nav__item"><a class="nav__link" href="#">Settlement and moving</a></li><li class="nav__item"><a class="nav__link" href="#">Service services</a></li><li class="nav__item"><a class="nav__link" href="#">Ecological stability</a></li><li class="nav__item"><a class="nav__link" href="#">Investment capabilities</a></li><li class="nav__item"><a class="nav__link" href="#">Loyalty program</a></li></ul></nav></div><div class="address footer__address"><ul class="address__list"><li class="address__item"><a href="#map" class="address__link">Address: 123 Main Street, City</a></li><li class="address__item"><a href="tel:555123456" class="address__link">Phone: 555-123-4567</a></li><li class="address__item">Sales department: 10:00 - 19:00</li><li class="address__item"><a href="mailto:manage@houstate.com" class="address__link link-bold">E-mail: manage@houstate.com</a></li></ul><ul class="socials"><li class="socials__item"><a href="#" class="socials__link"><img src="./images/social/facebook.svg" alt=""></a></li><li class="socials__item"><a href="" class="socials__link"><img src="./images/social/youtube.svg" alt=""></a></li><li class="socials__item"><a href="" class="socials__link"><img src="./images/social/instagram.svg" alt=""></a></li></ul></div></div></footer><script async src="https://www.youtube.com/iframe_api?_v=20230711220546"></script><script async src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.18.0/maps/maps-web.min.js?_v=20230711220546"></script><script async type="module" src="js/app.min.js?_v=20230711220546"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.18.0/maps/maps.css?_v=20230712063808"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css?_v=20230712063808"
+  />
+  <link rel="stylesheet" href="css/style.css?_v=20230712063808" />
+  <title>Houstate</title>
+</head>
+
+  <body>
+    <header class="header">
+  <div class="header__container">
+    <div class="header__top">
+      <a href="#" class="header__logo"> <div class="logo">
+  <div class="logo__top">HouState</div>
+  <span class="logo__bottom">The place of your life</span>
+</div>
+ </a>
+      <div class="header__nav"><nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link" href="#">About</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">District</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Catalog</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Mortgage</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Contacts</a>
+    </li>
+  </ul>
+</nav>
+</div>
+      <div class="header__nav-btn">
+        <button class="nav-btn"></button>
+      </div>
+    </div>
+    <div class="header__middle">
+      <h1 class="header__title">
+        Residential complex <br />
+        in the historical center
+      </h1>
+      <a href="#benefits" class="header__link">
+        <img src="./images/header/mouse.svg" alt="link to benefits image" />
+      </a>
+    </div>
+    <div class="header__bottom">
+      <a class="contact" href="#">
+        <img
+          id="svg"
+          class="contact__icon"
+          src="./images/header/pin.svg"
+          alt="icon for address"
+        />
+        123 Main Street, City
+      </a>
+
+      <div class="header__bottom--placeholder"></div>
+      <a class="contact" href="tel:5551234567">
+        <img
+          class="contact__icon"
+          src="./images/header/phone-call.svg"
+          alt="icon for phone"
+        />
+        555-123-4567</a
+      >
+    </div>
+
+    <!-- <nav class="header__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#" class="menu__link">Link</a></li>
+      </ul>
+    </nav> -->
+    
+  </div>
+</header>
+
+    <!--  -->
+    <main class="main">
+  <div class="main__container">
+    <section class="benefits" id="benefits">
+  <h2 class="visually-hidden">HouState benefits</h2>
+  <div class="benefits__container">
+    <ul class="benefits__list">
+      <li class="benefits__item">
+        <img
+          src="./images/benefits/bench.svg"
+          alt="image for benefits item"
+          class="benefits__item--img"
+        />
+        <p class="benefits__item--text">Parks and squares neaby</p>
+      </li>
+      <li class="benefits__item">
+        <img
+          src="./images/benefits/building.svg"
+          alt="image for benefits item"
+          class="benefits__item--img"
+        />
+        <p class="benefits__item--text">Fully of all equipped</p>
+      </li>
+      <li class="benefits__item">
+        <img
+          src="./images/benefits/fountain.svg"
+          alt="image for benefits item"
+          class="benefits__item--img"
+        />
+        <p class="benefits__item--text">10 fountains in the territory</p>
+      </li>
+      <li class="benefits__item">
+        <img
+          src="./images/benefits/bicycle.svg"
+          alt="image for benefits item"
+          class="benefits__item--img"
+        />
+        <p class="benefits__item--text">6 km bicycle paths</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <!--  -->
+    <section class="apartments" id="apartments">
+  <h3 class="apartments__title subtitle">Our apartments</h3>
+  <article class="apartments__cards cards">
+    <a href="#" class="cards__item">
+      <img
+        src="./images/apartments/appartment_1.jpg"
+        alt=""
+        class="cards__item--img"
+      />
+      <h4 class="cards__item--title">Penthouse "Olympus"</h4>
+    </a>
+    <a href="#" class="cards__item">
+      <img
+        src="./images/apartments/appartment_2.jpg"
+        alt=""
+        class="cards__item--img"
+      />
+      <h4 class="cards__item--title">apartments "Life studio"</h4>
+    </a>
+    <a href="#" class="cards__item">
+      <img
+        src="./images/apartments/appartment_3.jpg"
+        alt=""
+        class="cards__item--img"
+      />
+      <h4 class="cards__item--title">Apartment "Nostalgia"</h4>
+    </a>
+    <a href="#" class="cards__item">
+      <img
+        src="./images/apartments/appartment_4.jpg"
+        alt=""
+        class="cards__item--img"
+      />
+      <h4 class="cards__item--title">Housing "Creative"</h4>
+    </a>
+  </article>
+</section>
+
+    <!--  -->
+    <section class="cta">
+  <h2 class="cta__title subtitle">Would you like to see?</h2>
+  <div class="cta__wrapper">
+    <div class="cta__text">
+      LCD HouState is a business class project located in the city center. The
+      complex offers its residents apartments with an area of 60 to 160 square
+      meters. The building will have three sections in which Only 42 apartments
+      will be located.
+    </div>
+    <form action="" class="cta__form form">
+  <input type="text" class="form__input" placeholder="Your name" />
+  <input type="tel" class="form__input masked-phone" placeholder="Your phone" />
+  <p class="form__privacy">
+    *We do not transfer your data to anyone. And don't save your number in the
+    base.
+  </p>
+  <button class="form__button">I want to see</button>
+</form>
+
+  </div>
+</section>
+
+    <!--  -->
+    <section class="video">
+  <h2 class="video__title visually-hidden">Video about Houstate</h2>
+  <a href="https://youtu.be/hqchBvJtFsc" class="video__link v-modal--trigger">
+    <img
+      src="./images/video/play-button.svg"
+      alt="icon-play"
+      class="video__icon"
+    />
+    <img
+      src="./images/video/preview.jpg"
+      alt="video-preview"
+      class="video__img"
+    />
+  </a>
+</section>
+
+    <!--  -->
+    <section class="map">
+  <h2 class="map__title subtitle">District on the map</h2>
+  <div id="map-container" class="map__map"></div>
+</section>
+
+    <!--  -->
+    <section class="feedback">
+  <h2 class="feedback__title subtitle">Are there any question?</h2>
+  <form action="" class="feedback__form form">
+  <input type="text" class="form__input" placeholder="Your name" />
+  <input type="tel" class="form__input masked-phone" placeholder="Your phone" />
+  <p class="form__privacy">
+    *We do not transfer your data to anyone. And don't save your number in the
+    base.
+  </p>
+  <button class="form__button">I want to see</button>
+</form>
+
+</section>
+
+    <!--  -->
+  </div>
+</main>
+
+    <!--  -->
+    <footer class="footer">
+  <div class="footer__row">
+    <a href="#" class="footer__logo"> <div class="logo">
+  <div class="logo__top">HouState</div>
+  <span class="logo__bottom">The place of your life</span>
+</div>
+ </a>
+    <div class="footer__nav"><nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link" href="#">About</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">District</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Catalog</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Mortgage</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Contacts</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="footer__nav">
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="#">Settlement and moving</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Service services</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Ecological stability</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Investment capabilities</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Loyalty program</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <div class="footer__address address">
+      <ul class="address__list">
+        <li class="address__item">
+          <a href="#map" class="address__link"
+            >Address: 123 Main Street, City</a
+          >
+        </li>
+        <li class="address__item">
+          <a href="tel:555123456" class="address__link">Phone: 555-123-4567</a>
+        </li>
+        <li class="address__item">Sales department: 10:00 - 19:00</li>
+        <li class="address__item">
+          <a href="mailto:manage@houstate.com" class="address__link link-bold"
+            >E-mail: manage@houstate.com</a
+          >
+        </li>
+      </ul>
+      <ul class="socials">
+  <li class="socials__item">
+    <a href="#" class="socials__link">
+      <img src="./images/social/facebook.svg" alt="" />
+    </a>
+  </li>
+  <li class="socials__item">
+    <a href="" class="socials__link"
+      ><img src="./images/social/youtube.svg" alt=""
+    /></a>
+  </li>
+  <li class="socials__item">
+    <a href="" class="socials__link"
+      ><img src="./images/social/instagram.svg" alt=""
+    /></a>
+  </li>
+</ul>
+
+    </div>
+  </div>
+</footer>
+
+    <!--  -->
+    <script async src="https://www.youtube.com/iframe_api?_v=20230712063808"></script>
+<script
+  async
+  src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.18.0/maps/maps-web.min.js"
+></script>
+<script async type="module" src="js/app.min.js?_v=20230712063808"></script>
+
+    <!--  -->
+  </body>
+</html>
