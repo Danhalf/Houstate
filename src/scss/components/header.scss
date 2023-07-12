@@ -11,7 +11,7 @@
       rgba(45, 52, 60, 0.38) 51.04%,
       $color-bg 92.19%
     ),
-    url('./../images/header/header_bg3.jpg') no-repeat top center;
+    url('./images/header/header_bg3.jpg') no-repeat top center;
   background-size: cover;
 
   @include media_tablet {
